@@ -23,6 +23,36 @@ namespace Элементы_компоновки.View.Pages
         public EmployeesPage()
         {
             InitializeComponent();
+
+            EmployeesLv.ItemsSource = App.context.Employees.ToList();
+            // ItemsSource - свойство, которое представляет собой источник данных для элемента
+        }
+
+        private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(SearchTb.Text))
+            {
+                EmployeesLv.ItemsSource = App.context.Employees.ToList();
+            }
+            else
+            {
+                EmployeesLv.ItemsSource = App.context.Employees.Where(employee => employee.Fullname.Contains(SearchTb.Text)).ToList();
+            }
         }
     }
 }

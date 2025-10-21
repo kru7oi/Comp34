@@ -8,7 +8,7 @@
         Title="Главное окно" Height="720" Width="1280">
     <Grid Margin="20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="280" />
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
@@ -87,4 +87,6 @@
     Она основана на на концепции элементов Frame и Page.
     
     Frame - это контейнер, способный загружать и отображать страница (Page) и вести журнал навигации (история).
+    
+    Свойство NavigationUIVisibility отвечает за видимость журнала навигации, имеет 3 свойства: automatic, hidden, visible
 -->

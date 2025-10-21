@@ -22,6 +22,19 @@ public partial class Employee
     public DateOnly DateOfEmployment { get; set; }
 
     public bool IsVacation { get; set; }
+    public string VacationText
+    {
+        get
+        {
+
+            if (IsVacation)
+            {
+                return "Да";
+            }
+
+            return "Нет";
+        }
+    }
 
     public string Gender { get; set; } = null!;
 
